@@ -55,7 +55,7 @@ class MainActivity : ComponentActivity() {
 
         override fun doInBackground(vararg params: String?): String {
             val prompt = params[0] ?: return "Error: No prompt provided"
-            val apiKey = "AIzaSyDWnvLYU8-uNKfilmf6BcB3zszTOQyfjak" // Replace with your Gemini API key
+            val apiKey = "Add api key" // Replace with your Gemini API key
 
             var attempt = 0
             while (attempt < maxRetries) {
