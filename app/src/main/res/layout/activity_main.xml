@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#004466"
+    android:gravity="center_horizontal">
+
+    <!-- App Logo -->
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android LLM App"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:background="#FFCC00"
+        android:padding="8dp"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Model Selection -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Model:"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_marginBottom="4dp"/>
+
+    <RadioGroup
+        android:id="@+id/modelSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <RadioButton
+            android:id="@+id/radioAnthropic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anthropic"
+            android:textColor="#FFFFFF"
+            android:buttonTint="#FFFFFF"/>
+
+        <RadioButton
+            android:id="@+id/radioOpenAI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open AI"
+            android:checked="true"
+            android:textColor="#FFFFFF"
+            android:buttonTint="#00FF00"/>
+    </RadioGroup>
+
+    <!-- Prompt Input -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prompt:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/promptInput"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:hint="Enter prompt"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:minLines="3"
+        android:gravity="top|start"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:textColor="#FFFFFF"
+            android:background="#008000"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="#FFFFFF"
+            android:background="#FF4500"/>
+    </LinearLayout>
+
+    <!-- Response Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Response:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/responseOutput"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:textColor="#000000"
+        android:minLines="3"
+        android:gravity="top|start"/>
+</LinearLayout>
